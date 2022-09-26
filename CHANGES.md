@@ -1,3 +1,47 @@
+# 0.0.10
+
+## Changes
+
+- Add `markdown` decoder
+- More format documentation and also nicer help
+
+## Decoder changes
+
+- `elf`
+  - More robust decoding when string tables are missing
+  - Now decodes program header notes
+- `matroska` Now support sample lacing
+- `html` Handle leading doc type and processing directives
+
+## Changelog
+
+* 84ca1010 Update docker-golang from 1.19.0 to 1.19.1
+* c47c3866 Update github-go-version from 1.19.0, 1.19.0, 1.19.0 to 1.19.1
+* f08f44f1 ar: Integer strings might be empty
+* 004406de bitcoin_blkdat,bitcoin_block: Make sure there is a header if blkdat
+* fe64530e csv: Add tsv and header example
+* a6429ffe decode: Remove RangeSorted flag as we can decide on array/struct instead
+* a7a101ca doc,help: Nicer format help and move help tests into each format
+* 725ab1b1 doc,html,xml: Add more documentation and examples
+* abd19ed8 doc: Fix format sections a bit
+* 5382d46a elf: Basic program header notes decoding
+* 12105d8c elf: Treat missing string tables as empty to be more robust
+* 226a9a3e generics: Use more from x/exp
+* 87b2c6c1 help,doc: Use markdown for format documentation again
+* 8016352b html: Handle html with leading doctype etc
+* 768df301 interp,decode: For struct use map to lookup field
+* 00ee10a1 interp: Make to{actual,sym} behave similar to tovalue
+* 00a50662 markdown: Add decoder
+* 7749e1b5 matroska: Add proper lacing support
+* 2655ba09 mp4: More codec names (from mp4ra.org)
+* 7cd43b49 perfomance: increase performance by map usage
+* 6a6fec54 range,decode: Use own range sort impl to speed up a bit
+* 0f35fe48 ranges,decode: Correctly skip empty ranges when adding unknown fields
+* 7d865343 sortex: Package with type safe sort helpers
+* 808202fa test: Skip go test with -race by default
+* 1385b5d0 wasm: Add some documentation
+* d6316d5c wav: Decode smpl chunk
+
 # 0.0.9
 
 ## Changes
